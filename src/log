@@ -1,0 +1,42 @@
+
+
+### `utils/electionManager.js`
+- Core election management system
+- Handles creating elections, voting, and results
+- Saves election data to JSON file
+
+### `events/MessageReactionAdd.js`
+- Handles voting through emoji reactions
+- Updates election messages with vote counts
+- Validates votes and removes invalid reactions
+
+### `commands/election/create.js`
+- `/create-election` slash command
+- Creates new elections with title, options, and duration
+- Admin only
+
+### `commands/election/end.js`
+- `/end-election` slash command
+- Manually ends active elections
+- Admin only
+
+### `commands/election/results.js`
+- `/election-results` slash command
+- Shows election results and vote counts
+- Public command
+
+### `commands/election/audit.js`
+- `/election-audit` slash command
+- Generates detailed voting logs as JSON file
+- Admin only
+
+### `commands/election/list.js`
+- `/list-elections` slash command
+- Lists all active elections
+- Public command
+
+## Files Modified:
+- `index.js` - Added ElectionManager integration and auto-save functionality
+
+## Files Removed:
+- `election.js` - Refactored into the new structure above
